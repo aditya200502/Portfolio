@@ -10,8 +10,61 @@ body {
     background-position: center;
     background-attachment: fixed;
 }
+body::-webkit-scrollbar { 
+    display: none; 
+}
+
 
 /* Horizontal-list */
+
+.bars{
+    color: white;
+    margin: 0;
+    margin-left: 90%;
+    display: none;
+}
+
+.bars i {
+    font-size: 2rem;
+}
+
+.dropdown-list{
+    margin: 0;
+    display: none;
+    background-color: #828470;
+    box-shadow: 0px 4px 8px 1px #535547;
+}
+
+.dropdown-list ul{
+    margin: 0.2rem 0.2rem;
+    text-align: right;
+    padding: 0px 0.8rem;
+}
+
+.dropdown-menu:hover .dropdown-list{
+    display: block;
+    position: absolute;
+    right: 3%;
+}
+
+.dropdown-list li{
+    margin: 0.4rem 0px;
+}
+
+.no-list-style{
+    list-style: none;
+}
+
+.no-list-style li {
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.no-list-style li a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
 
 .horizontal-list {
     list-style: none;
@@ -110,10 +163,13 @@ section:target{
 
 /* Skills section */
 .skills-display{
+    padding: 10px;
     width: 70%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    margin-bottom: 30px;
 }
 
 .skill-progress{
@@ -157,13 +213,13 @@ section:target{
     color: white;
     font-size: 1rem;
     margin-left: 10px;
+    vertical-align: middle;
 }
 
 .skill-progress > div{
 
 /* This property will be applicable to every div */
-border-radius: 20px 0px 0px 20px;
-
+border-radius: 20px 0px 0px 20px;;
 }
 
 
@@ -359,9 +415,64 @@ button:focus {
     position: absolute;
     height: 75%;
     width: 0%;
-    border: 3px dotted #0096fa6b;
+    border: 3px dashed #0096fa6b;
     top: 10%;
     left: 50%;
+    padding: 0px;
+}
+
+@media only screen and (max-width: 572px) {
+    
+    .timeline-box {
+        width: 100%;
+        left: 10% !important;
+    }
+
+    .bars {
+        display: block;
+    }
+    
+    
+    .nav-menu {
+        display: none;
+    } 
+}
+
+
+@media only screen and (max-width : 768px){
+
+    .timeline-box{
+        left: 12% !important;
+        width: 88%;
+    }
+
+    .timeline-box::after {
+        left: -13% !important;
+    }
+    .timeline-divider{
+        top: 10%;
+        left: 2%;
+    }
+    html{
+        font-size: 15px;
+    }
+    #contact-form {
+        margin-left: 0%;
+    }
+
+    #contact-container {
+        flex-wrap: wrap;
+    }
+
+    #my-details-container {
+        width: 80%;
+        margin: 10%;
+    }
+
+    #contact-form-container {
+        width: 80%;
+        margin: 10%;
+    }
 }
 .timeline-traveller{
     position: sticky;
